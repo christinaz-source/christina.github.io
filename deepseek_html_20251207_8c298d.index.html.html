@@ -1,0 +1,1094 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shanghai CMB Import & Export Co., Ltd. - Professional Children's Art Supplies Supplier</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        /* PANTONE 318C Color Scheme */
+        :root {
+            --primary: #5CB8E4;    /* PANTONE 318C Main Color */
+            --secondary: #2D9CDB;   /* Secondary Blue */
+            --accent: #F2C94C;      /* Accent Color - Yellow, for children's products */
+            --light: #F8FBFE;       /* Light Background */
+            --dark: #2C3E50;        /* Dark Text */
+            --gray: #6C7A89;        /* Gray Text */
+        }
+        
+        body {
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: #fff;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: white;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo-circle {
+            width: 50px;
+            height: 50px;
+            background-color: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 1.8rem;
+            margin-right: 15px;
+            box-shadow: 0 4px 8px rgba(92, 184, 228, 0.3);
+        }
+        
+        .logo-text h1 {
+            color: var(--primary);
+            font-size: 1.6rem;
+            margin-bottom: 5px;
+        }
+        
+        .logo-text p {
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 30px;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+        }
+        
+        nav ul li a:hover {
+            color: var(--primary);
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            font-size: 1.5rem;
+            background: none;
+            border: none;
+            color: var(--primary);
+            cursor: pointer;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(92, 184, 228, 0.85), rgba(45, 156, 219, 0.8)), url('https://images.unsplash.com/photo-1593069567131-53a0614dde1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1770&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 120px 20px;
+        }
+        
+        .hero h2 {
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.3;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-bottom: 25px;
+            color: var(--accent);
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--accent);
+            color: var(--dark);
+            padding: 12px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn:hover {
+            background-color: #e6b63e;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Services Section */
+        .section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+        
+        .section-title p {
+            color: var(--gray);
+            max-width: 700px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+        }
+        
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .service-card {
+            background-color: white;
+            border-radius: 8px;
+            padding: 40px 30px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            text-align: center;
+            transition: transform 0.3s;
+            border-top: 5px solid var(--primary);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .service-icon {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+        
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--dark);
+        }
+        
+        /* Products Section */
+        .products {
+            background-color: var(--light);
+        }
+        
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+        
+        .product-card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s;
+            border: 1px solid rgba(92, 184, 228, 0.1);
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(92, 184, 228, 0.15);
+        }
+        
+        .product-img {
+            height: 200px;
+            background-color: #f0f7ff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            font-size: 3rem;
+        }
+        
+        .product-content {
+            padding: 25px;
+        }
+        
+        .product-content h3 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: var(--primary);
+        }
+        
+        /* About Us Section */
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+        
+        .about-text {
+            flex: 1;
+        }
+        
+        .about-text h3 {
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+        
+        .about-text p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+        
+        .about-stats {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+        
+        .stat-item {
+            text-align: center;
+            padding: 15px;
+            border-radius: 8px;
+            background-color: rgba(92, 184, 228, 0.1);
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            display: block;
+        }
+        
+        .stat-label {
+            color: var(--gray);
+            font-size: 1rem;
+        }
+        
+        .about-img {
+            flex: 1;
+            height: 400px;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            overflow: hidden;
+        }
+        
+        .about-img-content {
+            text-align: center;
+            padding: 20px;
+        }
+        
+        /* Contact Section */
+        .contact-section {
+            background-color: var(--light);
+        }
+        
+        .contact-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 50px;
+        }
+        
+        .contact-info h3 {
+            font-size: 1.8rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 25px;
+        }
+        
+        .contact-icon {
+            background-color: var(--primary);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+        
+        .contact-form {
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            border: 1px solid rgba(92, 184, 228, 0.1);
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--dark);
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: border 0.3s;
+        }
+        
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+        
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        /* CMB Meaning Section */
+        .cmb-meaning {
+            background-color: var(--primary);
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+        }
+        
+        .cmb-meaning h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .cmb-acronym {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+        
+        .cmb-letter {
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            min-width: 200px;
+        }
+        
+        .cmb-letter .letter {
+            font-size: 3.5rem;
+            font-weight: bold;
+            color: var(--accent);
+            margin-bottom: 10px;
+        }
+        
+        .cmb-letter .word {
+            font-size: 1.3rem;
+            font-weight: 600;
+        }
+        
+        .cmb-letter .meaning {
+            font-size: 1rem;
+            opacity: 0.9;
+            margin-top: 10px;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--primary);
+            color: white;
+            padding: 60px 0 30px;
+        }
+        
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-col h3 {
+            font-size: 1.5rem;
+            margin-bottom: 25px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-col h3::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 50px;
+            height: 3px;
+            background-color: var(--accent);
+        }
+        
+        .footer-col p {
+            margin-bottom: 15px;
+            opacity: 0.9;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        
+        .social-links a:hover {
+            background-color: var(--accent);
+            transform: translateY(-3px);
+            color: var(--dark);
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+        
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.9);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: var(--accent);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .hero h2 {
+                font-size: 2.3rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.5rem;
+            }
+            
+            .about-content {
+                flex-direction: column;
+            }
+            
+            .about-img {
+                width: 100%;
+            }
+            
+            .cmb-acronym {
+                gap: 20px;
+            }
+            
+            .cmb-letter {
+                min-width: 180px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .header-container {
+                padding: 15px 0;
+            }
+            
+            nav {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: white;
+                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+                padding: 20px;
+            }
+            
+            nav.active {
+                display: block;
+            }
+            
+            nav ul {
+                flex-direction: column;
+            }
+            
+            nav ul li {
+                margin: 0 0 15px 0;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .hero {
+                padding: 80px 20px;
+            }
+            
+            .hero h2 {
+                font-size: 1.8rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.3rem;
+            }
+            
+            .section {
+                padding: 60px 0;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+            
+            .stat-item {
+                padding: 10px;
+            }
+            
+            .stat-number {
+                font-size: 2rem;
+            }
+            
+            .cmb-letter {
+                min-width: 150px;
+                padding: 15px;
+            }
+            
+            .cmb-letter .letter {
+                font-size: 2.5rem;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .hero h2 {
+                font-size: 1.6rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+            
+            .service-card, .product-card, .contact-form {
+                padding: 30px 20px;
+            }
+            
+            .about-stats {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            .logo-text h1 {
+                font-size: 1.3rem;
+            }
+            
+            .cmb-acronym {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .cmb-letter {
+                width: 80%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <div class="logo-circle">CMB</div>
+                <div class="logo-text">
+                    <h1>Shanghai CMB Import & Export Co., Ltd.</h1>
+                    <p>Professional Children's Art Supplies Supplier</p>
+                </div>
+            </div>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <h2>CHINA MUTUAL BENEFIT</h2>
+            <div class="hero-subtitle">YOU WIN WE WIN</div>
+            <p>Global supplier of children's art supplies, providing safe, eco-friendly, and innovative painting products for children worldwide.</p>
+            <a href="#contact" class="btn">Request Catalog</a>
+        </div>
+    </section>
+
+    <!-- CMB Meaning Section -->
+    <section class="cmb-meaning">
+        <div class="container">
+            <h2>What CMB Stands For</h2>
+            <p style="font-size: 1.2rem; max-width: 800px; margin: 0 auto 20px;">Our name represents our core philosophy of creating mutual success through partnership</p>
+            
+            <div class="cmb-acronym">
+                <div class="cmb-letter">
+                    <div class="letter">C</div>
+                    <div class="word">CHINA</div>
+                    <div class="meaning">Proudly representing Chinese manufacturing excellence and global trade leadership</div>
+                </div>
+                
+                <div class="cmb-letter">
+                    <div class="letter">M</div>
+                    <div class="word">MUTUAL</div>
+                    <div class="meaning">Building relationships based on mutual respect, trust, and shared success</div>
+                </div>
+                
+                <div class="cmb-letter">
+                    <div class="letter">B</div>
+                    <div class="word">BENEFIT</div>
+                    <div class="meaning">Creating value and benefits for our clients, partners, and end-users</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section" id="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Services</h2>
+                <p>We provide comprehensive import and export services for children's art supplies</p>
+            </div>
+            
+            <div class="services">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3>Product R&D & Customization</h3>
+                    <p>Develop customized children's art products according to client requirements, including colors, formulas, packaging, and more.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-clipboard-check"></i>
+                    </div>
+                    <h3>Quality Inspection & Certification</h3>
+                    <p>Ensure all products comply with international safety standards (CE, ASTM, EN71, etc.), providing complete quality inspection reports and certifications.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-shipping-fast"></i>
+                    </div>
+                    <h3>Global Logistics</h3>
+                    <p>Provide sea, air, and land transportation options to ensure safe and timely delivery worldwide.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-file-contract"></i>
+                    </div>
+                    <h3>Customs Clearance & Compliance</h3>
+                    <p>Professional team handles customs declarations, inspections, and other procedures to ensure products enter target markets smoothly.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Market Trend Analysis</h3>
+                    <p>Provide global children's art supplies market trend analysis to help clients seize market opportunities and optimize product strategies.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>After-Sales Support</h3>
+                    <p>Provide multilingual customer support, handling order issues, product quality feedback, and customer satisfaction surveys.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="section products" id="products">
+        <div class="container">
+            <div class="section-title">
+                <h2>Children's Art Products</h2>
+                <p>We provide safe, eco-friendly, and innovative children's art products for different age groups</p>
+            </div>
+            
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-img">
+                        <i class="fas fa-brush"></i>
+                    </div>
+                    <div class="product-content">
+                        <h3>Watercolors & Paints</h3>
+                        <p>Non-toxic watercolor paints, finger paints, and tempera paints that are easy to clean and meet international safety standards.</p>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-img">
+                        <i class="fas fa-crayon"></i>
+                    </div>
+                    <div class="product-content">
+                        <h3>Crayons & Colored Pencils</h3>
+                        <p>Children's crayons, colored pencils, and oil pastels with vibrant colors, durable construction, and eco-friendly materials.</p>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-img">
+                        <i class="fas fa-paint-roller"></i>
+                    </div>
+                    <div class="product-content">
+                        <h3>Painting Tool Kits</h3>
+                        <p>Complete painting sets including brushes, palettes, water cups, etc., suitable for schools, families, and art training institutions.</p>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-img">
+                        <i class="fas fa-stamp"></i>
+                    </div>
+                    <div class="product-content">
+                        <h3>Creative Craft Materials</h3>
+                        <p>Clay, glitter, stickers, craft paper, and other creative materials to stimulate children's creativity and imagination.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section class="section" id="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>About CMB</h2>
+                <p>Global supplier specializing in children's art products, committed to providing safe and high-quality painting products for children worldwide</p>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Our Mission: Let Every Child Create Safely</h3>
+                    <p>Shanghai CMB Import & Export Co., Ltd. was established in 2005, specializing in the research, development, production, and global supply chain management of children's art products. We understand that safety is paramount for children's products, so all our products strictly adhere to international safety standards, ensuring they are non-toxic, eco-friendly, and safe.</p>
+                    <p>Our team consists of experienced product designers, quality inspection experts, and international trade specialists, familiar with children's product regulations in various countries. We collaborate with multiple internationally certified factories to ensure every step from raw materials to finished products meets the highest quality standards.</p>
+                    <p>We have successfully exported products to over 50 countries and regions worldwide, establishing long-term partnerships with numerous well-known brands and retailers. Whether OEM customization or private label products, we can provide professional solutions.</p>
+                    
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">18+</span>
+                            <span class="stat-label">Years Experience</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">300+</span>
+                            <span class="stat-label">Clients</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">50+</span>
+                            <span class="stat-label">Countries</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">100%</span>
+                            <span class="stat-label">Safety Certified</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-img">
+                    <div class="about-img-content">
+                        <i class="fas fa-child" style="font-size: 3rem; margin-bottom: 20px;"></i>
+                        <h3 style="font-size: 1.8rem; margin-bottom: 10px;">Safety First</h3>
+                        <p>All products pass CE, ASTM, EN71 and other international safety certifications</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact-section" id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contact Us</h2>
+                <p>If you are interested in our children's art products or need samples, please feel free to contact us</p>
+            </div>
+            
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Request Catalog & Quotation</h3>
+                    <p>Our sales team will respond to your inquiry within 24 hours, providing detailed product catalogs and quotation sheets.</p>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <h4>Office Address</h4>
+                            <p>Room 929/931, Oriental Building, 1500 Century Avenue, Pudong New District, Shanghai, China</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div>
+                            <h4>Phone Number</h4>
+                            <p>+86 21 68407242</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h4>Email Address</h4>
+                            <p>info@iheartartsupplies.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div>
+                            <h4>Business Hours</h4>
+                            <p>Monday to Friday 9:00-18:00 (GMT+8)</p>
+                        </div>
+                    </div>
+                    
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-weixin"></i></a>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <form id="inquiryForm">
+                        <div class="form-group">
+                            <label for="name">Name *</label>
+                            <input type="text" id="name" class="form-control" placeholder="Enter your name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="company">Company Name</label>
+                            <input type="text" id="company" class="form-control" placeholder="Enter your company name">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" class="form-control" placeholder="Enter your email address" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" class="form-control" placeholder="Enter your phone number" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="product">Product Category of Interest</label>
+                            <select id="product" class="form-control">
+                                <option value="">Please select</option>
+                                <option value="watercolor">Watercolors & Paints</option>
+                                <option value="crayon">Crayons & Colored Pencils</option>
+                                <option value="kits">Painting Tool Kits</option>
+                                <option value="craft">Creative Craft Materials</option>
+                                <option value="custom">OEM Customization Service</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Inquiry Details *</label>
+                            <textarea id="message" class="form-control" placeholder="Please describe your needs in detail, such as: need samples, product specifications, target market, etc." required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn">Submit Inquiry</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-col">
+                    <h3>CMB Children's Art Products</h3>
+                    <p>Shanghai CMB Import & Export Co., Ltd. specializes in global supply of children's art supplies, committed to providing safe, high-quality, and innovative painting products for children worldwide.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-weixin"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#products">Products</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Product Categories</h3>
+                    <ul class="footer-links">
+                        <li><a href="#products">Watercolors & Paints</a></li>
+                        <li><a href="#products">Crayons & Colored Pencils</a></li>
+                        <li><a href="#products">Painting Tool Kits</a></li>
+                        <li><a href="#products">Creative Craft Materials</a></li>
+                        <li><a href="#services">OEM Customization Service</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Contact Information</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Room 929/931, Oriental Building, 1500 Century Avenue, Pudong New District, Shanghai, China</p>
+                    <p><i class="fas fa-phone-alt"></i> +86 21 68407242</p>
+                    <p><i class="fas fa-envelope"></i> info@iheartartsupplies.com</p>
+                    <p><i class="fas fa-globe"></i> www.iheartartsupplies.com</p>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2005-2023 Shanghai CMB Import & Export Co., Ltd. All Rights Reserved | Shanghai ICP No. 12345678 | All products pass international safety certifications</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mainNav = document.getElementById('mainNav');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mainNav.classList.toggle('active');
+            const icon = mobileMenuBtn.querySelector('i');
+            if (mainNav.classList.contains('active')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+        
+        // Smooth Scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                // Close mobile menu
+                if (mainNav.classList.contains('active')) {
+                    mainNav.classList.remove('active');
+                    const icon = mobileMenuBtn.querySelector('i');
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                }
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior
